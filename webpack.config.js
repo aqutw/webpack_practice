@@ -19,6 +19,15 @@ module.exports = {
       title: 'Hello World app'
     })
   ],
+  module: {
+    loaders: [
+      {
+        test: /\.css$/,
+        loaders: ['style', 'css'],
+        include: APP_PATH
+      }
+    ]
+  },
   devServer: {
     historyApiFallback: true,
     hot: true,
